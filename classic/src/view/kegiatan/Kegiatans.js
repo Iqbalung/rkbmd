@@ -18,29 +18,16 @@ Ext.define('Admin.view.kegiatan.Kegiatans', {
             xtype: 'treelist',
             style:'height:100px;',
             store: {
-                root: {
-                expanded: true,
-                    children: [{
-                        text: 'Bidang Kesatuan Bangsa dan Politik2',
-                        iconCls: 'x-fa fa-folder',
-                        children: [
-                            {
-                                text: 'Bidang Kesatuan Bangsa dan Politik',
-                                expanded: false,
-                                style:'margin-left:10px;',
-                                children: [{
-                                    text: 'book report',
-                                    leaf: true,
-                                    iconCls: 'x-fa fa-book'
-                                }, {
-                                    text: 'algebra',
-                                    leaf: true,
-                                    iconCls: 'x-fa fa-graduation-cap'
-                                }]
-                            }
-                        ]
-                    }]
-                }
+                rootVisible: true,
+                hideHeaders: true,
+                columns: [{
+                    dataIndex: 'BIDANG_NAMA',
+                    xtype: 'treecolumn',
+                    flex: 1
+                }],
+                store: Ext.create('Admin.store.Bidangs',{
+                    storeId:"store_bidang",
+                })
             }
         },
         {

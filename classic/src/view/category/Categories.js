@@ -4,7 +4,11 @@ Ext.define('Admin.view.category.Categories', {
     requires: [
         'Ext.grid.Panel',
         'Ext.toolbar.Paging',
-        'Ext.grid.column.Date'
+        'Ext.grid.column.Date',
+        'Admin.view.bidang.BidangsController',
+        'Admin.view.bidang.Tree_bidang',
+        'Admin.store.Bidangs',
+        'Admin.view.bidang.Form_bidang',
     ],
     controller: 'searchcategories',
     viewModel: {
@@ -15,112 +19,10 @@ Ext.define('Admin.view.category.Categories', {
     margin: 20,
     items: [
         {
-            xtype: 'grid',
-            cls: 'user-grid',
-            title: 'User Results',
-            routeId: 'user',
-            bind: '{usersResults}',
-            scrollable: false,
-            tools: [
-                {
-                    iconCls: 'x-fa fa-pencil',
-                    toggleValue: false,
-                    listeners: {
-                        click: 'onRefreshToggle'
-                    }
-                },
-                {
-                    iconCls: 'x-fa fa-pencil',
-                    toggleValue: false,
-                    listeners: {
-                        click: 'onRefreshToggle'
-                    }
-                },
-                {
-                    iconCls: 'x-fa fa-pencil',
-                    toggleValue: false,
-                    listeners: {
-                        click: 'onRefreshToggle'
-                    }
-                }
+            xtype: 'tree_bidang',
+            allowDeselect: true,
+            tbar: [
             ],
-            columns: [
-                {
-                    xtype: 'gridcolumn',
-                    width: 40,
-                    dataIndex: 'identifier',
-                    text: '#'
-                },
-                {
-                    xtype: 'gridcolumn',
-                    renderer: function(value) {
-                        return "<img src='resources/images/user-profile/" + value + "' alt='Profile Pic' height='40px' width='40px'>";
-                    },
-                    width: 75,
-                    dataIndex: 'profile_pic',
-                    text: 'User'
-                },
-                {
-                    xtype: 'gridcolumn',
-                    cls: 'content-column',
-                    dataIndex: 'fullname',
-                    text: 'Name',
-                    flex: 1
-                },
-                {
-                    xtype: 'gridcolumn',
-                    cls: 'content-column',
-                    dataIndex: 'email',
-                    text: 'Email',
-                    flex: 1
-                },
-                {
-                    xtype: 'datecolumn',
-                    cls: 'content-column',
-                    width: 120,
-                    dataIndex: 'joinDate',
-                    text: 'Date'
-                },
-                {
-                    xtype: 'gridcolumn',
-                    cls: 'content-column',
-                    dataIndex: 'subscription',
-                    text: 'Subscription',
-                    flex: 1
-                },
-                {
-                    xtype: 'actioncolumn',
-                    items: [
-                        {
-                            xtype: 'button',
-                            iconCls: 'x-fa fa-pencil'
-                        },
-                        {
-                            xtype: 'button',
-                            iconCls: 'x-fa fa-close'
-                        },
-                        {
-                            xtype: 'button',
-                            iconCls: 'x-fa fa-ban'
-                        }
-                    ],
-
-                    cls: 'content-column',
-                    width: 120,
-                    dataIndex: 'bool',
-                    text: 'Actions',
-                    tooltip: 'edit '
-                }
-            ],
-            dockedItems: [
-                {
-                    xtype: 'pagingtoolbar',
-                    dock: 'bottom',
-                    itemId: 'userPaginationToolbar',
-                    displayInfo: true,
-                    bind: '{usersResults}'
-                }
-            ]
         }
     ]
 });

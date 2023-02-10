@@ -1,5 +1,5 @@
 $app-name:  dynamic( 'Admin' );
-$image-search-path: 'D:/demo/demo-dsbd/build/production/Admin/classic/resources';
+$image-search-path: 'C:/xampp/htdocs/rkbmd-fe/build/production/Admin/classic/resources';
 $theme-name:  dynamic( 'theme-triton' );
 $include-admin-application: dynamic(true);;
 $include-admin-data-pie: dynamic(true);;
@@ -40,15 +40,22 @@ $include-admin-model-email-friend: dynamic(true);;
 $include-admin-model-faq-category: dynamic(true);;
 $include-admin-model-faq-question: dynamic(true);;
 $include-admin-model-search-attachment: dynamic(true);;
+$include-admin-model-search-category: dynamic(true);;
+$include-admin-model-search-katalog: dynamic(true);;
+$include-admin-model-search-kegiatan: dynamic(true);;
 $include-admin-model-search-result: dynamic(true);;
 $include-admin-model-search-user: dynamic(true);;
 $include-admin-override-container-container: dynamic(true);;
 $include-admin-override-menu-item: dynamic(true);;
 $include-admin-proxy-api: dynamic(true);;
+$include-admin-store-bidangs: dynamic(true);;
 $include-admin-store-navigationtree: dynamic(true);;
 $include-admin-store-email-friends: dynamic(true);;
 $include-admin-store-email-inbox: dynamic(true);;
 $include-admin-store-faq-faq: dynamic(true);;
+$include-admin-store-search-categories: dynamic(true);;
+$include-admin-store-search-katalogs: dynamic(true);;
+$include-admin-store-search-kegiatans: dynamic(true);;
 $include-admin-store-search-results: dynamic(true);;
 $include-admin-store-search-users: dynamic(true);;
 $include-admin-view-authentication-authenticationcontroller: dynamic(true);;
@@ -59,6 +66,13 @@ $include-admin-view-authentication-lockingwindow: dynamic(true);;
 $include-admin-view-authentication-login: dynamic(true);;
 $include-admin-view-authentication-passwordreset: dynamic(true);;
 $include-admin-view-authentication-register: dynamic(true);;
+$include-admin-view-bidang-bidangs: dynamic(true);;
+$include-admin-view-bidang-bidangscontroller: dynamic(true);;
+$include-admin-view-bidang-form_bidang: dynamic(true);;
+$include-admin-view-bidang-tree_bidang: dynamic(true);;
+$include-admin-view-category-categories: dynamic(true);;
+$include-admin-view-category-categoriesmodel: dynamic(true);;
+$include-admin-view-category-katalogscontroller: dynamic(true);;
 $include-admin-view-chart-bounces: dynamic(true);;
 $include-admin-view-chart-network: dynamic(true);;
 $include-admin-view-chart-visitors: dynamic(true);;
@@ -79,6 +93,7 @@ $include-admin-view-dashboard-dashboardmodel: dynamic(true);;
 $include-admin-view-dashboard-earnings: dynamic(true);;
 $include-admin-view-dashboard-hddusage: dynamic(true);;
 $include-admin-view-dashboard-network: dynamic(true);;
+$include-admin-view-dashboard-network2: dynamic(true);;
 $include-admin-view-dashboard-sales: dynamic(true);;
 $include-admin-view-dashboard-services: dynamic(true);;
 $include-admin-view-dashboard-todos: dynamic(true);;
@@ -106,6 +121,13 @@ $include-admin-view-forms-wizardformcontroller: dynamic(true);;
 $include-admin-view-forms-wizardformmodel: dynamic(true);;
 $include-admin-view-forms-wizardone: dynamic(true);;
 $include-admin-view-forms-wizards: dynamic(true);;
+$include-admin-view-katalog-katalogs: dynamic(true);;
+$include-admin-view-katalog-katalogscontroller: dynamic(true);;
+$include-admin-view-katalog-katalogsmodel: dynamic(true);;
+$include-admin-view-kegiatan-bidangsmodel: dynamic(true);;
+$include-admin-view-kegiatan-kegiatans: dynamic(true);;
+$include-admin-view-kegiatan-kegiatanscontroller: dynamic(true);;
+$include-admin-view-kegiatan-kegiatansmodel: dynamic(true);;
 $include-admin-view-main-main: dynamic(true);;
 $include-admin-view-main-maincontainerwrap: dynamic(true);;
 $include-admin-view-main-maincontroller: dynamic(true);;
@@ -1944,6 +1966,22 @@ $current-resource-root: $default-resource-root;
 $relative-image-path-for-uis: $default-resource-path;
 @import '../../../../../classic/src/view/authentication/LockingWindow';
 
+/* including scss file adjacent to ..\..\..\..\..\classic\src\view\bidang\Bidangs.js */
+$default-resource-root: '' !default;
+$default-resource-path: 'images' !default;
+$current-package: false;
+$current-resource-root: $default-resource-root;
+$relative-image-path-for-uis: $default-resource-path;
+@import '../../../../../classic/src/view/bidang/Bidangs';
+
+/* including scss file adjacent to ..\..\..\..\..\classic\src\view\category\Categories.js */
+$default-resource-root: '' !default;
+$default-resource-path: 'images' !default;
+$current-package: false;
+$current-resource-root: $default-resource-root;
+$relative-image-path-for-uis: $default-resource-path;
+@import '../../../../../classic/src/view/category/Categories';
+
 /* including scss file adjacent to ..\..\..\..\..\classic\src\view\dashboard\Dashboard.js */
 $default-resource-root: '' !default;
 $default-resource-path: 'images' !default;
@@ -1983,6 +2021,22 @@ $current-package: false;
 $current-resource-root: $default-resource-root;
 $relative-image-path-for-uis: $default-resource-path;
 @import '../../../../../classic/src/view/forms/Wizards';
+
+/* including scss file adjacent to ..\..\..\..\..\classic\src\view\katalog\Katalogs.js */
+$default-resource-root: '' !default;
+$default-resource-path: 'images' !default;
+$current-package: false;
+$current-resource-root: $default-resource-root;
+$relative-image-path-for-uis: $default-resource-path;
+@import '../../../../../classic/src/view/katalog/Katalogs';
+
+/* including scss file adjacent to ..\..\..\..\..\classic\src\view\kegiatan\Kegiatans.js */
+$default-resource-root: '' !default;
+$default-resource-path: 'images' !default;
+$current-package: false;
+$current-resource-root: $default-resource-root;
+$relative-image-path-for-uis: $default-resource-path;
+@import '../../../../../classic/src/view/kegiatan/Kegiatans';
 
 /* including scss file adjacent to ..\..\..\..\..\classic\src\view\pages\BlankPage.js */
 $default-resource-root: '' !default;

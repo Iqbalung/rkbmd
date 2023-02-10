@@ -1,5 +1,5 @@
 $app-name:  dynamic( 'Admin' );
-$image-search-path: 'C:/xampp/htdocs/rkbmd/demo-dsbd/build/development/Admin/classic/resources';
+$image-search-path: 'C:/xampp/htdocs/rkbmd-fe/build/development/Admin/classic/resources';
 $theme-name:  dynamic( 'theme-triton' );
 $include-admin-application: dynamic(true);;
 $include-admin-data-pie: dynamic(true);;
@@ -48,6 +48,7 @@ $include-admin-model-search-user: dynamic(true);;
 $include-admin-override-container-container: dynamic(true);;
 $include-admin-override-menu-item: dynamic(true);;
 $include-admin-proxy-api: dynamic(true);;
+$include-admin-store-bidangs: dynamic(true);;
 $include-admin-store-navigationtree: dynamic(true);;
 $include-admin-store-email-friends: dynamic(true);;
 $include-admin-store-email-inbox: dynamic(true);;
@@ -65,6 +66,10 @@ $include-admin-view-authentication-lockingwindow: dynamic(true);;
 $include-admin-view-authentication-login: dynamic(true);;
 $include-admin-view-authentication-passwordreset: dynamic(true);;
 $include-admin-view-authentication-register: dynamic(true);;
+$include-admin-view-bidang-bidangs: dynamic(true);;
+$include-admin-view-bidang-bidangscontroller: dynamic(true);;
+$include-admin-view-bidang-form_bidang: dynamic(true);;
+$include-admin-view-bidang-tree_bidang: dynamic(true);;
 $include-admin-view-category-categories: dynamic(true);;
 $include-admin-view-category-categoriesmodel: dynamic(true);;
 $include-admin-view-category-katalogscontroller: dynamic(true);;
@@ -119,6 +124,7 @@ $include-admin-view-forms-wizards: dynamic(true);;
 $include-admin-view-katalog-katalogs: dynamic(true);;
 $include-admin-view-katalog-katalogscontroller: dynamic(true);;
 $include-admin-view-katalog-katalogsmodel: dynamic(true);;
+$include-admin-view-kegiatan-bidangsmodel: dynamic(true);;
 $include-admin-view-kegiatan-kegiatans: dynamic(true);;
 $include-admin-view-kegiatan-kegiatanscontroller: dynamic(true);;
 $include-admin-view-kegiatan-kegiatansmodel: dynamic(true);;
@@ -1960,6 +1966,14 @@ $current-package: false;
 $current-resource-root: $default-resource-root;
 $relative-image-path-for-uis: $default-resource-path;
 @import '../../../../../classic/src/view/authentication/LockingWindow';
+
+/* including scss file adjacent to ..\..\..\..\..\classic\src\view\bidang\Bidangs.js */
+$default-resource-root: '' !default;
+$default-resource-path: 'images' !default;
+$current-package: false;
+$current-resource-root: $default-resource-root;
+$relative-image-path-for-uis: $default-resource-path;
+@import '../../../../../classic/src/view/bidang/Bidangs';
 
 /* including scss file adjacent to ..\..\..\..\..\classic\src\view\category\Categories.js */
 $default-resource-root: '' !default;

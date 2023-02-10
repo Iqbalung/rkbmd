@@ -1,2 +1,2 @@
 // @tag full-page
-// @require D:\demo\demo-dsbd\app.js
+// @require C:\xampp\htdocs\rkbmd-fe\app.js
